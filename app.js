@@ -6,9 +6,9 @@ window.addEventListener('load', ()=>{  /* This function (and everything inside t
         navigator.geolocation.getCurrentPosition(position =>{
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            /*console.log(position); This to check latitude/longitude in console*/
-            const proxy = `http://cors-anywhere.herokuapp.com/`;
-            const api= `${proxy}https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=99db2c78f1a37b58406fe0247c0cc1a6`; 
+            console.log(position); /*This to check latitude/longitude in console*/
+        
+            const api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=99db2c78f1a37b58406fe0247c0cc1a6`; 
 
             fetch(api)
                 .then(response =>{
